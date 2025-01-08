@@ -73,6 +73,15 @@ This project leverages data analytics and machine learning to optimize solar pow
 
 ---
 
+## **How to Load Data**
+- The datasets are hosted in this repository. You can load them directly using their raw links.
+- Replace `<raw-link>` with the actual raw file link in the Python script:
+  ```python
+  url = "<raw-link>"
+  data = pd.read_csv(url)
+
+---
+
 ## **How to Run**
 1. Clone this repository:
    ```bash
