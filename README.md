@@ -1,69 +1,80 @@
-# Solar Power Prediction and Analysis
+# Solar Power Generation Analysis and Prediction
 
-## Overview
-This project focuses on analyzing and predicting solar power generation (AC Power) using advanced machine learning techniques. By leveraging historical data from solar plants, the project aims to optimize energy production, identify key influencing factors, and provide actionable insights for stakeholders in the renewable energy sector.
-
----
-
-## Project Objectives
-- **Predict AC Power Output**: Use supervised regression models to forecast power generation.
-- **Analyze Key Features**: Identify and quantify the impact of weather and operational factors.
-- **Optimize Solar Operations**: Provide insights to improve energy efficiency and scheduling.
+## **Project Overview**
+This project leverages data analytics and machine learning to optimize solar power generation by analyzing environmental and operational factors that influence energy production. By using advanced modeling techniques, we aim to provide actionable insights to enhance efficiency, predict power output, and support decision-making for solar energy businesses.
 
 ---
 
-## Key Features
-### 1. Data Preprocessing
-- Handled missing values using forward fill.
-- Engineered features, including lag features, rolling means, and interaction terms, to capture temporal and combined effects.
-- Standardized features to improve model performance.
+## **Objectives**
+1. **Understand Influencing Factors**:
+   - Analyze the impact of irradiation, temperature, and temporal variables on power generation.
+   - Identify patterns, trends, and anomalies in power output using advanced feature engineering.
 
-### 2. Exploratory Data Analysis (EDA)
-- Analyzed distributions, trends, and relationships between key variables.
-- Highlighted feature importance through correlation heatmaps and scatterplots.
-- Visualized power generation patterns across time (hourly, daily, seasonal trends).
+2. **Develop Predictive Models**:
+   - Compare machine learning models (Linear Regression, Ridge, Lasso, Random Forest) and a time-series model (ARIMA) to predict AC power.
+   - Use cross-validation, hyperparameter tuning, and confidence intervals to ensure robust performance.
 
-### 3. Machine Learning Models
-- **Baseline Models**: Linear Regression, Ridge, and Lasso to establish benchmarks.
-- **Advanced Models**: Random Forest with hyperparameter tuning for robust predictions.
-- **Naive Baseline**: Compared model performance to a simple mean predictor.
-
-### 4. Residual Analysis
-- Investigated model biases and error distributions to ensure unbiased predictions.
-- Quantified uncertainty in predictions using confidence intervals.
-
-### 5. Domain-Specific Insights
-- Identified key factors (e.g., irradiation and temperature) influencing power generation.
-- Recommended operational optimizations for solar plant efficiency.
+3. **Optimize Performance**:
+   - Evaluate feature importance to identify critical drivers of energy output.
+   - Test model predictions under extreme conditions for reliability.
+   - Incorporate residual analysis and prediction uncertainty for enhanced interpretability.
 
 ---
 
-## Results
-- **Best Model**: Random Forest with hyperparameter tuning.
-- **Performance Metrics**:
-  - **RMSE**: 42.47 kW (Random Forest), 383.05 kW (Baseline Linear Regression).
-  - **MAE**: 12.80 kW (Random Forest), 339.22 kW (Baseline Linear Regression).
-  - **Naive Baseline**: RMSE = 383.05, showing significant model improvement.
-- **Feature Importance**:
-  - IRRADIATION and MODULE_TEMPERATURE were identified as the most critical predictors.
+## **Key Features**
+- **Exploratory Data Analysis (EDA)**:
+  - Seasonal, daily, and hourly trends in power generation.
+  - Visualization of relationships between environmental variables (e.g., irradiation) and power output.
+  - Heatmaps and scatterplots to identify correlations and anomalies.
+
+- **Feature Engineering**:
+  - Interaction terms, rolling means, and lagged features for capturing temporal dynamics.
+  - Binary daylight indicator for improved daytime predictions.
+
+- **Predictive Modeling**:
+  - Baseline models (Linear Regression, Ridge, Lasso) to establish benchmarks.
+  - Random Forest with hyperparameter tuning for capturing non-linear relationships.
+  - ARIMA for time-series forecasting and comparison.
+
+- **Extreme Condition Analysis**:
+  - Predictions for diverse scenarios, including extreme weather and nighttime conditions.
+  - Validation of model robustness under rare operational scenarios.
+
+- **Performance Evaluation**:
+  - Metrics like RMSE, MAE, and R² for comparing model accuracy.
+  - Residual analysis and confidence intervals for interpretability.
 
 ---
 
-## Actionable Recommendations
-1. Schedule maintenance during low-power periods predicted by the model to minimize operational losses.
-2. Focus on improving solar tracking systems to maximize energy generation from high-irradiation periods.
-3. Use model predictions to integrate solar power output into grid energy management.
+## **Technologies Used**
+- **Languages and Libraries**:
+  - Python: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Statsmodels.
+  
+- **Machine Learning Techniques**:
+  - Linear Regression, Ridge, Lasso, Random Forest, ARIMA.
+  
+- **Visualization Tools**:
+  - Bar plots, scatterplots, heatmaps, line plots.
 
 ---
 
-## Tools and Technologies
-- **Programming Language**: Python
-- **Libraries**:
-  - **EDA**: Pandas, Matplotlib, Seaborn
-  - **Machine Learning**: Scikit-learn, Statsmodels
-- **Models**: Linear Regression, Ridge, Lasso, Random Forest, ARIMA (optional for time-series forecasting).
+## **Results and Insights**
+- Random Forest emerged as the best-performing model, achieving the lowest RMSE and MAE while explaining significant variability (high R²).
+- Feature importance analysis revealed that irradiation, module temperature, and hour of the day are the most impactful factors.
+- Predictions under extreme conditions validated the model’s reliability, aligning with physical expectations of solar power generation.
+- Seasonal and hourly trends provided actionable insights for optimizing operations and planning.
 
+---
 
+## **How This Project Helps**
+- **Solar Plant Operators**: Optimize operations and plan for peak and off-peak periods.
+- **Maintenance Teams**: Predict potential underperformance or equipment issues using anomalies in residuals.
+- **Investors**: Make informed decisions on solar technology investments based on actionable data insights.
 
+---
 
-
+## **How to Run**
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-repository-url.git
+   cd your-repository
